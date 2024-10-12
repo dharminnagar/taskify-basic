@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    /* background-color: #f8f9fa; */
+    background-color: #000;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.tasks {
+    margin-top: 20px;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+}
+
+.tasks > div {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    margin: 10px;
+}
+
+/* .todo, .in-progress, .under-review, .finished {
+    padding: 20px;
+} */
+
+.todoTasks, .inProgressTasks, .underReviewTasks, .finishedTasks {
+    padding: 20px 0px;
+}
+
+.todoTasks > div, .inProgressTasks > div, .underReviewTasks > div, .finishedTasks > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    border: #000 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.todo, .in-progress, .under-review, .finished {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addingTask {
+    display: none;
+    background-color: #808080;
+    flex-direction: column;
+    border:#808080 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.addingTask input {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.addingButtons {
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 10px;
+}
+
+.addingButtons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.addingButtons button:disabled {
+    pointer-events: none;
+}
+  
+.addingButtons button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+  
+.addingButtons button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.delete {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 16px;
+  outline: 0;
+  padding: 5px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.delete:hover,
+.delete:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.delete:active {
+  opacity: .5;
+}
+
+.add-task {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-width: 0;
+  outline: none;
+  padding: 5px 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.add-task:disabled {
+  pointer-events: none;
+}
+
+.add-task:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.add-task:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
